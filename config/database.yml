@@ -1,0 +1,20 @@
+test: &default
+  adapter: postgresql
+  encoding: unicode
+  database: contactbook_test
+  pool: 5
+  host: localhost
+  user:
+  password:
+
+production:
+  <<: *default
+  database: contactbook
+
+staging:
+  <<: *default
+  database: contactbook_staging
+
+development:
+  <<: *default
+  database: contactbook_development
